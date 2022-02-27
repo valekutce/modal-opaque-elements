@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Animated Modal</title>
+</head>
+
+<body>
+    <div class="modal">
+        <div class="modal-content">
+            <button class="close-modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="title">This is the modal title</div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit quo aliquid ea cum quas doloribus itaque quia veritatis? Nesciunt deserunt, quod amet suscipit consequuntur rem optio voluptates aliquid voluptatum vero delectus ipsum odio laborum praesentium, a architecto eligendi temporibus non similique quia expedita? Corrupti minus aspernatur cumque cum nulla, sequi, sint quo beatae adipisci pariatur aliquam.</p>
+            <div class="actions">
+                <button class="cancel">Cancel</button>
+                <button>Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <button class="open-modal">Open Modal</button>
+
+    <script>
+        var btnOpen = document.querySelector('.open-modal');
+        var btnClose = document.querySelector('.close-modal');
+        var modal = document.querySelector('.modal');
+        var toggleOpenClose = () => {
+            modal.classList.toggle('opened')
+        }
+
+        btnOpen.addEventListener('click', toggleOpenClose);
+        btnClose.addEventListener('click', toggleOpenClose);
+
+    </script>
+
+</body>
+
+</html>
